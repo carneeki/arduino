@@ -22,6 +22,7 @@ void setup() {
 }
 
 void loop() {
+  Serial.println(counter);
 }
 
 // rotate is called anytime the rotary inputs change state.
@@ -29,10 +30,7 @@ void rotate() {
   unsigned char result = rotary.process();
   if (result == DIR_CW) {
     counter++;
-    Serial.println(counter);
   } else if (result == DIR_CCW) {
     counter--;
-    Serial.println(counter);
   }
 }
-
